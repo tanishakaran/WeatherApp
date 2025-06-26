@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 120px;
+  background: url('https://svgshare.com/i/w6D.svg') repeat-x;
+  background-size: contain;
+  z-index: -2;
+  animation: waveAnim 8s linear infinite;
+}
+
+@keyframes waveAnim {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  margin: 40px auto;
+  color: inherit;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7b4397;
+}
+
+.search-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-area input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  width: 60%;
+}
+
+.search-area button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #7b4397;
+  color: white;
+  font-weight: bold;
+}
+
+.weather-info, .quote, .log {
+  text-align: center;
+  margin-top: 20px;
+}
+
+canvas {
+  margin-top: 20px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body.day-theme {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+}
+
+body.night-theme {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+}
+
+body.day-theme .app {
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+}
+
+body.night-theme .app {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+}
+
+body.night-theme .weather-info,
+body.night-theme .quote,
+body.night-theme .log {
+  color: #ddd;
+}
